@@ -1,0 +1,19 @@
+<div class="card card-block">
+  <!--<div class="card-block">-->
+    <div class="card-block-title">
+      <h4 class="card-title">{{ options.title }}</h4>
+      <h6 class="card-subtitle text-muted">{{ options.subtitle }}</h6>
+    </div>
+    <div dropdown class="card-block-selection dropdown">
+      <a dropdownToggle href="javascript:;" id="name2" class="nav-link text-muted dropdown-toggle">
+        Weekly <b class="caret"></b><span class="sr-only">(current)</span>
+      </a>
+      <ul dropdownMenu class="dropdown-menu-right" aria-labelledby="name2">
+        <li>
+          <a href="javascript:;" class="dropdown-item">Monthly </a>
+        </li>
+      </ul>
+    </div>
+  <!--</div>-->
+  <chart [options]="options.chart" class="chart"></chart>
+</div>

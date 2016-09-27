@@ -1,0 +1,27 @@
+.home {
+  color: #4C5E70;
+}
+
+.separator {
+  color: #4C5E70;
+  padding-top: 10px;
+}
+
+.card-block-left {
+  float:left;
+  //vertical-align: ;
+}
+
+.card-block-right {
+  width:auto;
+  float: right;
+  overflow:hidden;
+}
+
+.small-chart {
+  min-width: 100px;
+  height: 100px;
+  max-width: 200px;
+  margin: 0 auto;
+  width: 100%;
+}

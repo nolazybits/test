@@ -1,0 +1,53 @@
+@media (min-width: 0) {
+  .navbar-toggleable-xs {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    .text-center {
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav-logo {
+    background: none;
+    width: auto;
+    height: auto;
+  }
+
+  .search {
+    display: none;
+  }
+
+  #toggle-sidebar {
+    display: block;
+  }
+
+  .topnav {
+    background: $topnav-desktop-logo-color;
+    height: $topnav-height-mobile;
+    .text-center {
+      //padding-left: 55px;
+    }
+  }
+
+  .top-right-nav {
+    display: none;
+  }
+  .navbar-brand {
+    float: none;
+    display: inline-block;
+    cursor: pointer;
+    img.logo {
+      height: 30px;
+      width: auto;
+      vertical-align: -webkit-baseline-middle;
+    }
+  }
+}

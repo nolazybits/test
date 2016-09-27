@@ -1,12 +1,10 @@
-import './polyfills.ts';
+import "./polyfills.ts";
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import {AppModule} from "./app/";
+import {environment} from "./environment";
+//  AppModule is the entry point of our application.
 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { enableProdMode } from '@angular/core';
-import { environment } from './environments/environment';
-import { AppModule } from './app/';
-
-if (environment.production) {
-  enableProdMode();
-}
-
-platformBrowserDynamic().bootstrapModule(AppModule);
+//  bootstrap the module and set environment
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .then(environment);

@@ -1,0 +1,8 @@
+<button class="btn btn-default" id="toggle-sidebar" type="button" (click)="eventCalled()">
+  &#9776;
+</button>
+<nav class="sidebar no-select" [ngClass]="{sidebarPushRight: isOpen}">
+  <ul class="list-group">
+    <a *ngFor="let menuItem of menuItems" class="list-group-item" [routerLink]="['/'+menuItem.path]" [routerLinkActive]="['router-link-active']"><i class="fa fa-fw {{menuItem.data.icon}}"></i>  {{ menuItem.data.title }}</a>
+  </ul>
+</nav>

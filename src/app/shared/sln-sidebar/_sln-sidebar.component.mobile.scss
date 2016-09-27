@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+
+  #toggle-sidebar {
+    display: block;
+  }
+
+  .sidebar {
+    top: $topnav-height-mobile;
+    left: 0;
+  }
+}
