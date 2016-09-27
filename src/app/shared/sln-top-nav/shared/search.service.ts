@@ -14,7 +14,7 @@ export class SearchService {
     search.set('search', term);
     search.set('format', 'json');
     return this.jsonp
-      .get('http://en.wikipedia.org/w/api.php?callback=JSONP_CALLBACK', { search })
+      .get('https://en.wikipedia.org/w/api.php?callback=JSONP_CALLBACK', { search })
       .map((request) => request.json()[1]);
   }
 }

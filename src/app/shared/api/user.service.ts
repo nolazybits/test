@@ -26,7 +26,7 @@ export class UserService
       .delay(400)
       .timeInterval()
       .flatMap( x => {
-        return this.http.get('http://uifaces.com/api/v1/random')
+        return this.http.get('https://uifaces.com/api/v1/random')
           .map((res: Response) => <User> res.json())
           .catch(this.handleError);
       });

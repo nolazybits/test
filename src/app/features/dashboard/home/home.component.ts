@@ -56,6 +56,9 @@ export class HomeComponent implements OnInit
       chart: {
         type: 'area'
       },
+      title: {
+        text: null
+      },
       credits: {
         enabled: false
       },
@@ -124,6 +127,9 @@ export class HomeComponent implements OnInit
     return {
       credits: {
         enabled: false
+      },
+      title: {
+        text: null
       },
       colors: ['blue', 'red'],
       plotOptions: {
