@@ -1,8 +1,10 @@
 # Dashboard
 
-- Angular2
+- Angular2 (Typescript) 
 - Bootstrap 4
 - Highcharts
+- Angular2 HighChart
+- Angular Cli (read bellow)
 
 You can search (calls wikipedia)  
 You can see the notification and user menu  
