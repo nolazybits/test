@@ -1,5 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, Inject } from "@angular/core";
 import { HttpModule, JsonpModule } from "@angular/http";
 import { AppComponent } from "./app.component";
 import { RouterModule } from "@angular/router";
@@ -31,4 +31,8 @@ import { APP_BASE_HREF } from "@angular/common";
 
 export class AppModule
 {
+  constructor(@Inject(APP_BASE_HREF) private baseHref: string)
+  {
+    console.log(this.baseHref);
+  }
 }
