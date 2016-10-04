@@ -10,8 +10,6 @@ You can search (calls wikipedia)
 You can see the notification and user menu  
 Users' avatar are loaded randomly from uiface
 
-Warning in compilation due to angular2-highcharts importing typings (it's a bug)
-
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
