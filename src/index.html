@@ -7,8 +7,7 @@
   <script>
     (function() {
       var split = window.location.pathname.split('/');
-      var x = split.slice(0, split.length - 1).join("/") + "/";
-      window['_app_base'] = '/' + window.location.pathname.split('/')[1];
+      window['_app_base'] = split.slice(0, split.length - 1).join("/") + "/";
     })();
   </script>
 
