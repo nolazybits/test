@@ -8,20 +8,24 @@
 }
 
 .card-block-left {
+  display: table;
   float:left;
-  //vertical-align: ;
+  width: 100px;
+}
+
+.card-block-left-content {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .card-block-right {
-  width:auto;
-  float: right;
   overflow:hidden;
+  display: block;
+  margin-left: 50px;
 }
 
 .small-chart {
   min-width: 100px;
   height: 100px;
-  max-width: 200px;
   margin: 0 auto;
-  width: 100%;
 }

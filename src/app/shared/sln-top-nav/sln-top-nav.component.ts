@@ -18,9 +18,20 @@ export class SlnTopNavComponent implements OnInit
   public searchInputControl: FormControl = new FormControl('');
   public avatarURL: string;
 
+  //  this should have its own type in the shared core
+  public alerts: {type: string, title: string}[];
+
   constructor( private searchService: SearchService)
   {
     this.avatarURL = 'https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/48.jpg';
+    this.alerts = [
+      {type: 'default', title: 'Default'},
+      {type: 'primary', title: 'Primary'},
+      {type: 'success', title: 'Success'},
+      {type: 'info', title: 'Info'},
+      {type: 'warning', title: 'Warning'},
+      {type: 'danger', title: 'Danger'},
+    ];
   }
 
   ngOnInit()

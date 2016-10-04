@@ -1,7 +1,7 @@
-<nav class="navbar no-select navbar-dark bg-inverse navbar-fixed-top topnav">
+<nav class="navbar no-select navbar-dark navbar-fixed-top topnav">
   <div class="collapse navbar-toggleable-xs clearfix text-center">
     <div class="navbar-brand topnav-logo">
-      <a [routerLink]="['/dashboard','/home']"><img class="logo" src="assets/img/logo.png" alt="Solnet Logo"/></a>
+      <a [routerLink]="['/dashboard','/home']"><img class="logo" src="/assets/img/logo.png" alt="Solnet Logo"/></a>
     </div>
 
     <div class="nav search" dropdown [(isOpen)]="status.isOpen" keyboardNav="true">
@@ -21,17 +21,9 @@
           <i class="fa fa-bell"></i> <b class="caret"></b><span class="sr-only">(current)</span>
         </a>
         <ul class="dropdown-menu alert-dropdown" aria-labelledby="name2">
-          <li>
-            <a href="javascript:;" class="dropdown-item">Alert Name <span
-              class="label label-default"> Alert Badge</span></a>
-          </li>
-          <li>
-            <a href="javascript:;" class="dropdown-item">Alert Name <span
-              class="label label-default"> Alert Badge</span></a>
-          </li>
-          <li>
-            <a href="javascript:;" class="dropdown-item">Alert Name <span
-              class="label label-default"> Alert Badge</span></a>
+          <li *ngFor="let alert of alerts">
+            <a href="javascript:;" class="dropdown-item"> {{alert.title}}
+            <span class="tag tag-{{alert.type}} pull-right"> {{alert.type}} </span></a>
           </li>
           <li class="dropdown-divider"></li>
           <li>
@@ -48,9 +40,6 @@
         <ul class="dropdown-menu" aria-labelledby="single-button">
           <li>
             <a class="dropdown-item" href="javascript:;"><i class="fa fa-fw fa-user"></i> Profile</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="javascript:;"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
           </li>
           <li>
             <a class="dropdown-item" href="javascript:;"><i class="fa fa-fw fa-gear"></i> Settings</a>

@@ -1,12 +1,12 @@
-import {BrowserModule} from "@angular/platform-browser";
-import {NgModule} from "@angular/core";
-import {ReactiveFormsModule, FormsModule} from "@angular/forms";
-import {HttpModule, JsonpModule} from "@angular/http";
-import {AppComponent} from "./app.component";
-import {RouterModule} from "@angular/router";
-import {routes} from "./app.routing";
-import {SearchService} from "./shared/sln-top-nav/shared/search.service";
-import {UserService} from "./shared/api/user.service";
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpModule, JsonpModule } from "@angular/http";
+import { AppComponent } from "./app.component";
+import { RouterModule } from "@angular/router";
+import { routes } from "./app.routing";
+import { SearchService } from "./shared/sln-top-nav/shared/search.service";
+import { UserService } from "./shared/api/user.service";
+import { APP_BASE_HREF } from "@angular/common";
 
 //  read
 //  https://angular.io/docs/ts/latest/guide/architecture.html#!#modules
@@ -15,17 +15,18 @@ import {UserService} from "./shared/api/user.service";
   declarations: [
     AppComponent
   ],
-  imports: [
+  imports     : [
     BrowserModule,
     HttpModule,
     JsonpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [
+  providers   : [
     SearchService,
-    UserService
+    UserService,
+    {provide: APP_BASE_HREF, useValue: window['_app_base'] || '/'}
   ],
-  bootstrap: [AppComponent]
+  bootstrap   : [AppComponent]
 })
 
 export class AppModule

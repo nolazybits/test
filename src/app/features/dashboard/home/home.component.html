@@ -1,5 +1,12 @@
 <div class="container-fluid home">
   <div class="row">
+    <div class="col-xl-12 separator">
+      <h6><strong>Hi Filip,</strong></h6>
+      Checkout your latest project and their progress
+      <hr/>
+    </div>
+  </div>
+  <div class="row">
     <div class="col-xl-12">
       <card-chart [options]="chart1"></card-chart>
     </div>
@@ -14,30 +21,22 @@
   <div class="row">
     <div class="col-xl-6">
       <div class="card card-block">
-        <div class="card-block clearfix">
+        <div class="card-block">
           <div class="text-xs-center card-block-left">
-            <h4 class="card-title">96</h4>
-            <h6 class="card-subtitle text-muted">working hours</h6>
+            <div class="card-block-left-content">
+              <h4 class="card-title">96</h4>
+              <h6 class="card-subtitle text-muted">working hours</h6>
+            </div>
           </div>
-          <div class="card-block-right">
-            <chart [options]="chart3.chart" class="small-chart"></chart>
-          </div>
+          <chart [options]="chart3.chart" class="small-chart card-block-right"></chart>
         </div>
         <hr>
         <div class="card-block clearfix">
           <div class="text-xs-center card-block-left">
-            <h4 class="card-title">1,204</h4>
-            <h6 class="card-subtitle text-muted">Conversations</h6>
-          </div>
-          <div class="card-block-right">
-            <chart [options]="chart3.chart" class="small-chart"></chart>
-          </div>
-        </div>
-        <hr>
-        <div class="card-block clearfix">
-          <div class="text-xs-center card-block-left">
-            <h4 class="card-title">7</h4>
-            <h6 class="card-subtitle text-muted">People</h6>
+            <div class="card-block-left-content">
+              <h4 class="card-title">7</h4>
+              <h6 class="card-subtitle text-muted">People</h6>
+            </div>
           </div>
           <div class="card-block-right" style="width: 66%">
             <img [src]="getUserAvatar(0)" class="img-circle">
@@ -48,7 +47,6 @@
             <img [src]="getUserAvatar(5)" class="img-circle">
             <img [src]="getUserAvatar(6)" class="img-circle">
           </div>
-          <!--<card-chart [options]="chart1"></card-chart>-->
         </div>
       </div>
     </div>

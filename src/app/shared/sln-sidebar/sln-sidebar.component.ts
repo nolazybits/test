@@ -15,11 +15,27 @@ export class SlnSidebarComponent implements OnInit
   public isOpen: boolean;
   public menuItems: Array<any>;
 
-  constructor(service: SlnSidebarService)
+  constructor(sidebarService: SlnSidebarService)
   {
-    this.isOpen = service.isOpen;
-    this.menuItems = service.menu;
+    this.isOpen = sidebarService.isOpen;
+    this.menuItems = sidebarService.menu;
   }
+
+  public toggleSideBar(): void
+  {
+    this.isOpen = !this.isOpen;
+  }
+
+  public closeSideBar(): void
+  {
+    this.isOpen = false;
+  }
+
+  public openSideBar(): void
+  {
+    this.isOpen = false;
+  }
+
 
   ngOnInit()
   {
