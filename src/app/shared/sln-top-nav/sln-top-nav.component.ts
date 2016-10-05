@@ -1,9 +1,10 @@
-import {Component, OnInit} from "@angular/core";
+import { Component, OnInit, OpaqueToken, Inject } from "@angular/core";
 import {SearchService} from "./shared/search.service";
 import {FormControl} from "@angular/forms";
 import "rxjs/add/operator/debounceTime";
 import "rxjs/add/operator/distinctUntilChanged";
 import "rxjs/add/operator/switchMap";
+import { APP_BASE_HREF } from "@angular/common";
 
 @Component({
   selector: 'sln-top-nav',
@@ -17,12 +18,17 @@ export class SlnTopNavComponent implements OnInit
   public searchResults: Array<string>;
   public searchInputControl: FormControl = new FormControl('');
   public avatarURL: string;
+  public baseHref: OpaqueToken;
 
   //  this should have its own type in the shared core
   public alerts: {type: string, title: string}[];
 
-  constructor( private searchService: SearchService)
+  constructor(
+    private searchService: SearchService,
+    @Inject(APP_BASE_HREF) baseHref: OpaqueToken
+  )
   {
+    this.baseHref = baseHref;
     this.avatarURL = 'https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/48.jpg';
     this.alerts = [
       {type: 'default', title: 'Default'},

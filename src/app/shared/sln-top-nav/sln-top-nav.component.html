@@ -1,7 +1,7 @@
 <nav class="navbar no-select navbar-dark navbar-fixed-top topnav">
   <div class="collapse navbar-toggleable-xs clearfix text-center">
     <div class="navbar-brand topnav-logo">
-      <a [routerLink]="['/dashboard','/home']"><img class="logo" src="/assets/img/logo.png" alt="Solnet Logo"/></a>
+      <a [routerLink]="['/dashboard','/home']"><img class="logo" src="{{baseHref}}assets/img/logo.png" alt="Solnet Logo"/></a>
     </div>
 
     <div class="nav search" dropdown [(isOpen)]="status.isOpen" keyboardNav="true">
